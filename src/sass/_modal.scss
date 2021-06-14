@@ -44,9 +44,9 @@ ul {
 
 // Стили для модального окна и бэкдроп
 
-// .blur {
-//   filter: blur(3px);
-// }
+.modal-open {
+  overflow: hidden;
+}
 
 .backdrop {
   backdrop-filter: blur(3px);
@@ -96,6 +96,15 @@ ul {
     width: 930px;
     // height: 1023px;
     border-radius: 300px 0px;
+  }
+
+  .backdrop.is-hidden & {
+    // transform: translate(-50%, -50%) scale(0.5);
+
+    opacity: 0;
+
+    // transition: transform $timing $timing-function,
+    //   opacity $timing $timing-function;
   }
 
   &__main-container {
